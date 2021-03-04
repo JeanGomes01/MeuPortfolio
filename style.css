@@ -653,17 +653,26 @@ footer {
     box-shadow: 0 0.1rem 0.6rem #00000009;
 }
 
-@media all and (max-width:768px) {
+@media all and (max-width:600px) {
     header {
         width: 100%;
     }
     .conhecimentos {
         width: 100%;
-        row-gap: 3rem;
+        row-gap: 5rem;
     }
     .projetos {
         display: grid;
         grid-auto-columns: auto;
+        width: 100%;
+    }
+    .contato-wrapper {
+        width: 100%;
+    }
+    .orcamento-wrapper {
+        width: 100%;
+    }
+    .footer-content {
         width: 100%;
     }
 }
