@@ -653,7 +653,10 @@ footer {
     box-shadow: 0 0.1rem 0.6rem #00000009;
 }
 
-@media all and (max-width:600px) {
+@media screen and (max-width:600px) {
+    .container {
+        overflow: hidden;
+    }
     header {
         width: 100%;
     }
@@ -661,9 +664,12 @@ footer {
         width: 100%;
         row-gap: 5rem;
     }
+    .conhecimento-text {
+        width: 100%;
+    }
     .projetos {
         display: grid;
-        grid-auto-columns: auto;
+        grid-template-columns: auto;
         width: 100%;
     }
     .contato-wrapper {
