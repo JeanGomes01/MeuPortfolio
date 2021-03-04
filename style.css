@@ -357,6 +357,8 @@ h2 {
 }
 
 .projetos {
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 3rem;
@@ -365,7 +367,7 @@ h2 {
 .card {
     margin-top: 5rem;
     width: 20rem;
-    height: 25rem;
+    height: 30rem;
     position: relative;
 }
 
@@ -649,4 +651,19 @@ footer {
     color: #fff;
     border-radius: 0.3rem;
     box-shadow: 0 0.1rem 0.6rem #00000009;
+}
+
+@media all and (max-width:768px) {
+    header {
+        width: 100%;
+    }
+    .conhecimentos {
+        width: 100%;
+        row-gap: 3rem;
+    }
+    .projetos {
+        display: grid;
+        grid-auto-columns: auto;
+        width: 100%;
+    }
 }
