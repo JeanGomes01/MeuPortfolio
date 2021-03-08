@@ -663,13 +663,12 @@ footer {
         width: 100%;
     }
     .conhecimentos {
-        margin-bottom: 1rem;
         width: 100%;
-        height: 100%;
+        height: auto;
         display: grid;
         grid-template-columns: repeat(1fr 1fr);
         grid-template-rows: (7);
-        row-gap: 5rem;
+        row-gap: 6rem;
     }
     .conhecimento-text {
         font-family: var(--font-secundary);
@@ -679,13 +678,6 @@ footer {
     .conhecimentos-img-wrapper {
         width: 100%;
         height: 100%;
-        grid-column: 6;
-        grid-row: 1;
-    }
-    .conhecimentos-img-wrapper img {
-        width: 100%;
-        height: 100%;
-        display: grid;
         grid-column: 6;
         grid-row: 1;
     }
