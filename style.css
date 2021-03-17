@@ -105,6 +105,11 @@ header {
 }
 
 .img-wrapper img {
+    background-image: url('imagens/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     /*imagens que tem elementos da classe "img-wrapper"*/
     width: 100%;
     height: 100%;
