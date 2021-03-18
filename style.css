@@ -371,7 +371,7 @@ h2 {
 
 .card {
     margin-top: 5rem;
-    width: 20rem;
+    width: 25rem;
     height: 30rem;
     position: relative;
 }
@@ -735,6 +735,12 @@ footer {
         display: grid;
         grid-template-columns: auto;
         width: 100%;
+    }
+    .card {
+        margin-top: 5rem;
+        width: 20rem;
+        height: 30rem;
+        position: relative;
     }
     .sessao-contato {
         width: auto;
