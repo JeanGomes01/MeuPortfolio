@@ -1,6 +1,7 @@
 document.querySelector(".hamburguer").addEventListener("click", () =>
     document.querySelector(".container").classList.toggle("show-menu")
-);
+); /*Selecionando o elemento (hamburguer) e adcionando um evento de click vazio
+*/
 
 document.querySelector("#qtde").addEventListener("change", atualizarPreco)
 document.querySelector("#js").addEventListener("change", atualizarPreco)
