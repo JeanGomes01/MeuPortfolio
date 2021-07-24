@@ -313,7 +313,19 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
+
+/* .sessao-header h1::before{
+    content:'';
+    position: absolute;
+    height:4px;
+    width:340px;
+    bottom:40px;
+    left:50;
+    border-radius:8px;
+    background: linear-gradient(to right, #021B79, #0575E6);
+} */
 
 .sessao-header h1 {
     font-family: var(--font-primary);
@@ -369,6 +381,8 @@ h2 {
     margin-bottom: 3rem;
 }
 
+
+/*CARDS*/
 .card {
     margin-top: 5rem;
     width: 25rem;
@@ -450,6 +464,10 @@ h2 {
     visibility: visible;
 }
 
+
+
+
+/*Sessão de CONTATOS*/
 .sessao-contato {
     width: 100%;
     height: 100vh;
@@ -476,6 +494,8 @@ h2 {
     width: 65%;
     background-color: #eee;
     padding: 1rem 3rem 3rem 3rem;
+    display:flex;
+    flex-direction: column;
 }
 
 .sessao-contato h1 {
@@ -485,63 +505,112 @@ h2 {
     color: #272727;
     font-size: 3rem;
     font-weight: lighter;
-}
-
-.sessao-contato form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.input-group {
+    margin-bottom:2rem;
     position: relative;
 }
 
-.field {
+.sessao-contato h1::before {
+    content:'';
+    position:absolute;
+    height:4px;
+    width:150px;
+    bottom:15px;
+    left:50;
+    border-radius:8px;
+    background: linear-gradient(to right, #0575E6,#021B79);
+}
+
+/*Formulário de Contato*/
+.input-group {
+    position:relative;
+}
+.input-group input {
     background: transparent;
-    border: none;
-    width: 20rem;
-    font-size: 1.5rem;
-    font-family: var(--font-secundary);
-    border-bottom: 2px dashed #636363;
-    height: 3rem;
     outline: none;
-    margin: 1rem 0;
+    border: none;
+    font-size: 0.9rem;
+    color:rgba(0, 0, 0, 0.7);
 }
 
-.field-label {
+.input-group input::placeholder{
+    color:rgba(0, 0, 0, 0.5);
+}
+
+.input-group:first-child{
+    margin-bottom:1.5rem;
+}
+
+.input-group:nth-child(2){
+    margin-bottom: 1.5rem;
+}
+.input-group .underline::before{
+    content:'';
     position: absolute;
-    left: 0;
-    top: 2rem;
-    font-size: 1.2rem;
-    font-family: var(--font-secundary);
-    text-transform: uppercase;
-    transition: all 0.3s;
+    height:1px;
+    width:100%;
+    bottom:-5px;
+    left:0;
+    background:rgba(0, 0, 0, 0.2);
+}
+.input-group .underline::after{
+    content:'';
+    position: absolute;
+    height:1px;
+    width:100%;
+    bottom:-5px;
+    left:0;
+    background:linear-gradient(45deg,#0575E6, #021B79);
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out;
+    transform-origin: left;
+}
+.input-group input:focus ~ .underline::after{
+    transform: scaleX(1);
 }
 
+
+
+/*Label*/
+.field{
+    border:none;
+    width:30rem;
+}
+
+/*Caixa de Mensagem*/
 .input-group textarea {
-    padding-top: 1rem;
-    max-width: 25rem;
-    max-height: 3rem;
+    background: transparent;
+    border:none;
+    outline:none;
 }
 
-.field:focus~label {
-    top: 0;
-    font-size: 1rem;
+
+/*Botão Enviar de contatos*/
+
+.btn.btn-submit{
+    margin-top:2rem;
+    padding:0.4rem;
+    background: linear-gradient(to left, #021B79, #0575E6);
+    cursor: pointer;
+    color:white;
+    font-size:0.9rem;
+    font-weight: 300;
+    border-radius:4px;
+    transition: all 0.3s ease;
 }
 
-.fiel:focus {
-    border-bottom: 1px solid;
+.btn.btn-submit:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #021B79,#0575E6);
 }
 
-.btn-submit {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    width: 100%;
-    height: 3rem;
-    margin-top: 1rem;
-}
+
+
+
+
+
+
+
+/*ORÇAMENTO*/
 
 .sessao-orcamento {
     margin-top: 2rem;
@@ -617,6 +686,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .footer-content {
