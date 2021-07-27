@@ -27,3 +27,53 @@ function atualizarPreco() {
 
     document.querySelector("#preco").innerHTML = `R$ ${preco.toFixed(2)}`
 }
+
+
+/*Scroll suave no menu*/ 
+function initScrollSuave(){
+
+const linksInternos = document.querySelectorAll('.js-menu .menu-item a[href^="#"]');
+
+function scrollToAside(event){
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute('href');
+    const aside = document.querySelector(href);
+    
+    aside.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+    });
+
+    //Forma alternativa/* 
+    /*const topo = (aside.offsetTop);
+    window.scrollTo({
+        top: 1000,
+        behavior: 'smooth',
+    }); */
+}
+
+linksInternos.forEach((link) => {
+    link.addEventListener('click', scrollToAside);
+});
+
+}
+initScrollSuave();
+
+
+function initScrollSaiba(){
+const botaoSaiba = document.querySelector('.js-banner a[href^="#"]');
+
+function scrollToSaiba(event){
+    event.preventDefault();
+    const sobremim = event.currentTarget.getAttribute('href');
+    const bannerButton = document.querySelector(sobremim);
+    
+    bannerButton.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+    })
+}
+
+botaoSaiba.addEventListener('click', scrollToSaiba);
+}
+initScrollSaiba();
