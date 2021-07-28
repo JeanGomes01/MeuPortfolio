@@ -106,7 +106,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    animation: zoom 0.3s;
+    animation: zoom 1.5s;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 8);
@@ -269,6 +269,102 @@ h2 {
     background-color: #0575E6;
 }
 
+
+
+
+
+/*Sessão Conhecimentos*/
+
+
+.sessao-conhecimentos {
+    margin-top: 0.5rem;
+    background: transparent;
+    background: linear-gradient(45deg, #000, #272a35);
+    /*margin-bottom: 5rem;*/
+}
+.sessao-conhecimentos h1 {
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    color: #fff;
+    position: relative;
+}
+
+.sessao-conhecimentos h1::before{
+    content: '';
+    position: absolute;
+    height:0.25rem;
+    width:12.5rem;
+    bottom:0.938rem;
+    left:60;
+    border-radius:0.5rem;
+    background: linear-gradient(45deg, #0575E6, #021B79);
+}
+
+/*Ícones do h3 da sessão header*/
+.conhecimento-header h3 {
+    font-family: var(--font-secundary);
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+/*ìcones de conhecimentos*/
+.conhecimento-header {
+    display: flex;
+    align-items: center;
+    color:#fff;
+}
+
+.conhecimento-header i {
+    text-align: center;
+    display: inline-block;
+    line-height:1.7cm;
+    vertical-align: middle;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.9rem;
+    color:#fff;
+    background-color: royalblue;
+    box-shadow: 0px 0px 10px rgba(0,0,0,5.0);
+    border-radius: 0.9rem;
+}
+
+#html{
+    background: linear-gradient(120deg, #f06529,#851602);
+}
+
+#css{
+    background: linear-gradient(120deg, #2965f1, #0a2696);
+}
+#figma{
+    background: linear-gradient(120deg, #d4acc4, #ac5975);
+}
+#javascript{
+    background: linear-gradient(120deg, #ebe713,#928906);
+}
+#mysql{
+    background: linear-gradient(120deg, #00758F, #F29111);
+}
+#git-github{
+    background: linear-gradient(120deg, #4b4b4b, #272727);
+}
+
+/******************/
+
+
+.conhecimento-text {
+    color:#FFF;
+    font-family: var(--font-secundary);
+    margin-top: 1.5rem;
+    display: flex;
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    column-gap: 40px;
+}
+
+
 .conhecimentos {
     width: 100%;
     height: 100vh;
@@ -279,70 +375,63 @@ h2 {
     row-gap: 1.5rem;
 }
 
+/*HTML*/
 .conhecimento:nth-child(1) {
     grid-column: 4 / 7;
     grid-row: 1 / 3;
 }
 
+
+/*CSS*/
 .conhecimento:nth-child(2) {
-    grid-column: 3 / 6;
+    grid-column: 4 / 6;
     grid-row: 3 / 5;
 }
 
+
+/*Figma*/
 .conhecimento:nth-child(3) {
     grid-column: 4 / 7;
     grid-row: 5 / -1;
 }
 
+/*Javascrip*/
 .conhecimento:nth-child(4) {
     grid-column: 11 / 14;
     grid-row: 1 / 3;
 }
 
+/*MySQL*/
 .conhecimento:nth-child(5) {
-    grid-column: 12 / 15;
+    grid-column: 11 / 15;
     grid-row: 3 / 5;
 }
 
+/*Git e Github*/
 .conhecimento:nth-child(6) {
     grid-column: 11 / 14;
     grid-row: 5 / -1;
 }
 
-.sessao-conhecimentos {
-    margin-top: 3rem;
-    background-color: #f5f5f5;
-    margin-bottom: 5rem;
-}
 
-.sessao-header {
-    display: flex;
+
+
+
+/*Sessão Projetos*/
+
+.sessao-projetos h1 {
+    display:flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-}
-
-/* .sessao-header h1::before{
-    content:'';
-    position: absolute;
-    height:4px;
-    width:340px;
-    bottom:40px;
-    left:50;
-    border-radius:8px;
-    background: linear-gradient(to right, #021B79, #0575E6);
-} */
-
-.sessao-header h1 {
+    text-align: center;
     font-family: var(--font-primary);
     font-size: 3rem;
-    color: #4b4b4b;
-    /* border-bottom: solid 3px #021B79; */
-    margin-bottom: 1.5rem;
+    color: #272727;
+    margin-bottom: 0.5rem;
     position: relative;
 }
 
-.sessao-header h1::before {
+.sessao-projetos h1::before {
     content:'';
     position: absolute;
     height:0.25rem;
@@ -354,69 +443,18 @@ h2 {
 
 }
 
-.conhecimento-header {
-    display: flex;
-    align-items: center;
-    color: #2b2b2b;
-}
-
-.conhecimento-header h1 {
-    position: relative;
-}
-.conhecimento-header h1::before {
-    content:'';
-    position: absolute;
-      height:0.25rem;
-    width:12.5rem;
-    bottom:0.938rem;
-    left:60;
-    border-radius:0.5rem;
-    background: linear-gradient(45deg, #0575E6, #021B79);
-    
-}
-
-.conhecimento-header i {
-    font-size: 2.5rem;
-}
-
-.conhecimento-header h3 {
-    font-family: var(--font-secundary);
-    font-size: 2rem;
-    padding-left: 1rem;
-}
-
-.conhecimento-text {
-    font-family: var(--font-secundary);
-    margin-top: 1.5rem;
-    display: flex;
-    -webkit-column-count: 2;
-    /* Chrome, Safari, Opera */
-    column-count: 2;
-    -webkit-column-gap: 40px;
-    column-gap: 40px;
-}
-
-.conhecimentos-img-wrapper {
-    grid-column: 7 / 11;
-    grid-row: 2 / 6;
-    width: 100%;
-}
-
-.conhecimentos-img-wrapper img {
-    object-fit: cover;
-    width: 100%;
-}
-
+/*Container da sessão Projetos*/
 .projetos {
+    background: linear-gradient(45deg, #000, #272a35);
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 
-/*CARDS*/
+/*CARDS da Sessão Projetos*/
 .card {
     margin-top: 5rem;
     width: 25rem;
@@ -486,10 +524,6 @@ h2 {
     box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, .4);
 }
 
-
-
-
-
 .card-info button {
     cursor: pointer;
     width: 8rem;
@@ -501,6 +535,9 @@ h2 {
     opacity: 1;
     visibility: visible;
 }
+
+
+
 
 
 
@@ -644,7 +681,74 @@ h2 {
 
 
 
+/*Sessao Sobre mim */
+.sessao-sobremim {
+    text-align: center;
+    /* background: url(/imagens/minhaimagem.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #272727,#272a35);
+    margin-bottom:3rem;
+}
 
+.sessao-sobremim h1 {
+    color:white;
+    font-size: 3.5rem;
+    font-family: var(--font-primary);
+    font-weight: lighter;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.sessao-sobremim h1::before{
+    content: '';
+    position: absolute;
+    height:0.25rem;
+    width:12.5rem;
+    bottom:0.938rem;
+    left:60;
+    border-radius:0.5rem;
+    background: linear-gradient(45deg, #0575E6, #021B79);
+}
+
+.sessao-sobremim h2 {
+    color:#FFF;
+    font-family: var(--font-secundary);
+    font-size: 3rem;
+
+}
+
+.descricao-sobremim {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+    margin: 0 auto;
+}
+
+.descricao-sobremim img {
+    max-width:25rem;
+    border: 5px solid #FFF;
+    border-radius:50% 50% 48% 52% / 20% 20% 80% 80%;
+    margin-bottom:2rem;
+    box-shadow: 0px 0px 15px rgba(0,0,0,5.0);
+}
+
+.descricao-texto {
+    font-size: 1rem;
+    font-family: var(--font-action);
+    max-width: 400px;
+    color:#fff;
+}
+
+.descricao-texto a {
+    color:#fff;
+}
 
 
 
@@ -768,6 +872,13 @@ footer {
     box-shadow: 0 0.1rem 0.6rem #00000009;
 }
 
+
+
+
+
+
+/*Resposividade*/
+
 @media screen and (max-width:768px) {
     .container {
         overflow: hidden;
@@ -775,11 +886,10 @@ footer {
     header {
         width: 100%;
     }
-    .sessao-header h1 {
+    .sessao-conhecimentos h1 {
         font-family: var(--font-primary);
         font-size: 3rem;
-        color: #4b4b4b;
-        /* border-bottom: solid 3px #021B79; */
+        color: #fff;
     }
     .conhecimentos {
         width: 100%;
@@ -906,6 +1016,11 @@ footer {
         height: auto;
         border-radius: 0.2rem;
     }
+    .sessao-sobremim{
+        width:100%;
+        height:auto;
+    }
+
     .orcamento-wrapper {
         width: 90%;
         height: auto;
@@ -915,37 +1030,4 @@ footer {
     }
 }
 
-
-/*Sessao Sobre mim */
-.sessao-sobremim {
-    text-align: center;
-    /* background: url(/imagens/minhaimagem.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    width: 100%;
-    height: 100vh;
-    background-color:#a7a7a7;
-    margin-bottom:3rem;
-}
-
-.sessao-sobremim h1 {
-    font-size: 3rem;
-    font-family: var(--font-primary);
-    font-weight: lighter;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.sessao-sobremim h1::before{
-    content: '';
-    position: absolute;
-    height:0.25rem;
-    width:12.5rem;
-    bottom:0.938rem;
-    left:60;
-    border-radius:0.5rem;
-    background: linear-gradient(45deg, #0575E6, #021B79);
-}
 
