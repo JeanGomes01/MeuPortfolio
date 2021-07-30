@@ -24,9 +24,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.container {
-    padding:0 10px;
-}
+
 
 .hamburguer {
     width: 2rem;
@@ -323,6 +321,7 @@ h2 {
     display: flex;
     align-items: center;
     color:#fff;
+    cursor: pointer;
 }
 
 .conhecimento-header i {
@@ -965,14 +964,10 @@ footer {
 
 @media screen and (max-width:650px) {
 
-    .container {
-        overflow: hidden;
-    }
+    
     header {
         width: 100%;
     }
-
-
 
     /*Menu*/
     .sidebar {
@@ -1002,6 +997,7 @@ footer {
         font-family: var(--font-primary);
         font-size: 3rem;
         color: #fff;
+        
     }
     .conhecimentos {
         width: 100%;
