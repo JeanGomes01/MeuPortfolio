@@ -963,7 +963,9 @@ footer {
 /*Resposividade*/
 
 @media screen and (max-width:650px) {
-
+    .container {
+        overflow: hidden;
+    }
     
     header {
         width: 100%;
