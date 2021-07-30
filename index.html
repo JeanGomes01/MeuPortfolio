@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css"><!--Fonte do botao download cv-->
     <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png ">
     <link rel="icon " type="image/png " sizes="16x16 " href="imagens/favicon-16x16.png">
@@ -16,7 +17,7 @@
 
 <body>
 
-    <div-- class="container">
+    <div class="container">
 
         <div class="hamburguer">
             <div class="line" id="Line1"></div>
@@ -48,9 +49,6 @@
                         <a href="#home" class="menu-link">Home</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#sobremim" class="menu-link">Sobre mim</a>
-                    </li>
-                    <li class="menu-item">
                         <a href="#conhecimentos" class="menu-link">Conhecimentos</a>
                     </li>
                     <li class="menu-item">
@@ -58,6 +56,9 @@
                     </li>
                     <li class="menu-item">
                         <a href="#contato" class="menu-link">Contatos</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#sobremim" class="menu-link">Sobre mim</a>
                     </li>
                     <li class="menu-item">
                         <a href="#orcamento" class="menu-link">Orçamento</a>
@@ -75,68 +76,70 @@
         <!--sidebar-->
 
     <!--sessao-conhecimentos-->
-        <section class="sessao-conhecimentos" id="conhecimentos">
+        <section class="sessao-conhecimentos js-scroll" id="conhecimentos">
                 <h1>Conhecimentos</h1>
 
             <!---conhecimentos-->
-            <div class="conhecimentos">
-                <div class="conhecimento">
+            <div class="conhecimentos js-accordion">
+
+                <div class="conhecimento ">
                     <div class="conhecimento-header" >
                         <i class="fab fa-html5" id="html"></i>
-                        <h3>HTML</h3>
+                        <h3 class="select-h3">HTML</h3>
                     </div>
-                    <div class="conhecimento-text">
+                    <div class="conhecimento-text ">
                         <p>HTML5 é uma linguagem de marcação para a World Wide Web e é uma tecnologia chave da Internet, originalmente proposto por Opera Software. É a quinta versão da linguagem HTML.</p>
                     </div>
                 </div>
                 <div class="conhecimento">
-                    <div class="conhecimento-header">
+                    <div class="conhecimento-header ">
                         <i class="fab fa-css3-alt" id="css"></i>
-                        <h3>CSS</h3>
+                        <h3 class="select-h3">CSS</h3>
                     </div>
-                    <div class="conhecimento-text">
+                    <div class="conhecimento-text ">
                         <p>CSS3 é a terceira mais nova versão das famosas Cascading Style Sheets, pela qual se define estilos para um projeto web.</p>
                     </div>
                 </div>
                 <div class="conhecimento">
                     <div class="conhecimento-header">
                         <i class="fab fa-figma" id="figma"></i>
-                        <h3>Figma</h3>
+                        <h3 class="select-h3">Figma</h3>
                     </div>
-                    <div class="conhecimento-text">
+                    <div class="conhecimento-text ">
                         <p>Figma é um editor gráfico de vetor e prototipagem de projetos de design baseado principalmente no navegador web, com ferramentas offline adicionais para aplicações desktop.</p>
                     </div>
                 </div>
                 <div class="conhecimento">
                     <div class="conhecimento-header">
                         <i class="fab fa-js" id="javascript"></i>
-                        <h3>Javascript</h3>
+                        <h3 class="select-h3">Javascript</h3>
                     </div>
-                    <div class="conhecimento-text">
+                    <div class="conhecimento-text ">
                         <p> O Javascript é uma linguagem de programação utilizada principalmente em páginas web.</p>
                     </div>
                 </div>
                 <div class="conhecimento">
                     <div class="conhecimento-header">
-                        <i class="fas fa-database" id="mysql"></i>
-                        <h3>MySQL</h3>
+                        <i class="fab fa-github" id="git-github"></i>
+                        <h3 class="select-h3">Git e GitHub</h3>
                     </div>
-                    <div class="conhecimento-text">
-                        <p>O MySQL é um sistema de gerenciamento de banco de dados SGBD, que utiliza a linguagem SQL </p>
+                    <div class="conhecimento-text ">
+                        <p>GIT é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software,
+                            mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.
+                            GITHUB é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git. 
+                        </p>
                     </div>
                 </div>
                 <div class="conhecimento">
                     <div class="conhecimento-header">
-                        <i class="fab fa-github" id="git-github"></i>
-                        <h3>Git e GitHub</h3>
+                        <i class="fas fa-database" id="mysql"></i>
+                        <h3 class="select-h3">MySQL</h3>
                     </div>
-                    <div class="conhecimento-text">
-                        <p>GIT é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software,</p>
-                        <p>mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.</p>
-                        <p>GITHUB é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.</p>
-
+                    <div class="conhecimento-text ">
+                        <p>O MySQL é um sistema de gerenciamento de banco de dados SGBD, que utiliza a linguagem SQL </p>
                     </div>
                 </div>
+               
             </div>
             <!--Conhecimentos-->
         </section>
@@ -144,12 +147,13 @@
 
 
         
-        <section class="sessao-projetos" id="projetos">
-            <h1>Projetos</h1>
-
+        <section class="sessao-projetos js-scroll" id="projetos">  
             <div class="projetos">
-                <div class="card">
-                    <div class="card-img-wrapper">
+                <h1>Projetos</h1>
+
+                <div class="card-containers">
+                <div class="card">     
+                    <div class="card-img-wrapper">        
                         <img src="imagens/proj1.1.jpg" alt="imagem do projeto toDo" />
                         <div class="card-info">
                             <h2>Meu Primeiro Site</h2>
@@ -188,6 +192,7 @@
                         <p>Site desenvolvido por mim e uma amiga do curso técnico de informática, construído em HTML5 , CSS3 E BOOTSTRAP </p>
                         <a href="https://jdnewtec.netlify.app" target="_blank"><button class="btn">Saiba Mais</button></a>
                     </div>
+                </div>
                     <!--card-info-->
                 </div>
                 <!--card-->
@@ -199,7 +204,7 @@
         </section>
         <!--sessao-projetos-->
 
-        <section class="sessao-contato " id="contato">
+        <section class="sessao-contato js-scroll" id="contato">
             <div class="contato-wrapper ">
                 <div class="contato-left "></div>
                 <!--contato-left-->
@@ -236,7 +241,7 @@
 
 
         <!--Sessão Quem sou sobre mim-->
-        <section class="sessao-sobremim " id="sobremim">
+        <section class="sessao-sobremim js-scroll" id="sobremim">
             <h1>Sobre mim</h1>       
             
 
@@ -251,12 +256,18 @@
                         target="https://www.recodepro.org.br/_blank">Rede Pro,</a></p>
                     recentemente ingressei no curso de ensino superior de Sistemas de Informação</p>
                     Sou também autodidata e entusiasta em tecnologia</p>
+
+                    <div class="sobremim-botao">
+                        <a download="" href="Curriculo - Jean.pdf">
+                            Download CV <i class="button_icon uit uit-download-alt"></i>
+                        </a>
+                    </div>                   
                 </div>
-               
           </div> 
         </section>
 
-        <section class="sessao-orcamento" id="orcamento">
+        <!--Sessao-orcamento-->
+        <section class="sessao-orcamento js-scroll" id="orcamento">
             <div class="orcamento-wrapper">
                 <h1>Faça um orçamento</h1>
                 <form>
@@ -287,6 +298,8 @@
             <!--orcamento-wrapper-->
         </section>
         <!--sessao-orcamento-->
+
+
         <footer>
             <div class="footer-content">
                 <p>

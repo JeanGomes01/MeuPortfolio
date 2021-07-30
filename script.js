@@ -77,3 +77,84 @@ function scrollToSaiba(event){
 botaoSaiba.addEventListener('click', scrollToSaiba);
 }
 initScrollSaiba();
+
+
+
+
+
+function initAccordionSkills(){
+    const allh3 = document.querySelectorAll('.select-h3');
+    const tagP = document.querySelectorAll('.js-accordion p');    
+    const activeClass = 'ativo';
+    if(allh3.length && tagP){  
+    
+    
+    
+
+    tagP[0].classList.add(activeClass);
+    allh3[0].classList.add(activeClass);
+
+    function activeAccordion(){
+        this.classList.toggle(activeClass);
+        this.parentElement.nextElementSibling.children[0].classList.toggle(activeClass);
+    }
+
+    allh3.forEach((h3) => {
+        h3.addEventListener('click', activeAccordion);
+    })
+    }
+};
+initAccordionSkills();
+
+/* allh3.forEach((h3) => {
+    h3.addEventListener('click', function(event){
+    const tagP = event.target.parentElement.nextElementSibling.children[0];
+      tagP.classList.toggle('ativo');
+    })
+})
+ */
+/*function activeAccordion(){
+
+    console.log(this.classList.add('ativo'));
+}
+
+accordionSkills.forEach((item) => {
+    item.addEventListener('click', activeAccordion);
+})*/
+
+
+
+
+
+
+
+
+
+
+
+
+function initAnimacaoScroll(){
+const scrollSections = document.querySelectorAll('.js-scroll');
+if(scrollSections.length){
+const windowMetade = window.innerHeight * 0.6;
+
+
+function animaScroll(){
+    scrollSections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const isSectionVisible = (sectionTop - windowMetade) < 0;
+        
+        if(isSectionVisible){
+            section.classList.add('ativo');
+        } else {
+            section.classList.remove('ativo');
+        }
+    })
+}
+
+animaScroll();
+
+window.addEventListener('scroll', animaScroll);
+}
+};
+initAnimacaoScroll();

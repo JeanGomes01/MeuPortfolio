@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;1,200;1,400&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -10,17 +12,23 @@
 
  :root {
     --font-primary: "Baloo da 2", serif;
-    --font-secundary: "Josefin Slab", serif;
-    --font-terciary:"Poppins", serif;
+    --font-secondary: "Josefin Slab", serif;
+    --font-tertiary:"Poppins", serif;
+    --font-quaternary:"IBM Plex Mono", serif;
     --font-action: "Mulish", serif;
+    
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
+.container {
+    padding:0 10px;
+}
+
 .hamburguer {
-    /*background-color: red;*/
     width: 2rem;
     height: 2rem;
     position: fixed;
@@ -153,7 +161,7 @@ h2 {
 
 .banner p {
     /*Fonte e implementação de cores do parágrafo*/
-    font-family: var(--font-secundary);
+    font-family: var(--font-secondary);
     color: #fff;
     font-size: 2rem;
     text-shadow: 0.2rem .2rem rgba(0, 0, 0, .4);
@@ -277,6 +285,8 @@ h2 {
 
 
 .sessao-conhecimentos {
+    width:100%;
+    height:auto;
     margin-top: 0.5rem;
     background: transparent;
     background: linear-gradient(45deg, #000, #272a35);
@@ -303,7 +313,7 @@ h2 {
 
 /*Ícones do h3 da sessão header*/
 .conhecimento-header h3 {
-    font-family: var(--font-secundary);
+    font-family: var(--font-secondary);
     font-size: 2rem;
     padding-left: 1rem;
 }
@@ -353,26 +363,51 @@ h2 {
 
 
 .conhecimento-text {
+    font-size:0.8rem;
     color:#FFF;
-    font-family: var(--font-secundary);
-    margin-top: 1.5rem;
-    display: flex;
-    -webkit-column-count: 2;
-    /* Chrome, Safari, Opera */
-    column-count: 2;
-    -webkit-column-gap: 40px;
-    column-gap: 40px;
+    font-family: var(--font-tertiary);
+    margin-top: 0.2rem;
 }
+
+.conhecimento-text p {
+    display:none;
+}
+
+.conhecimento-header h3::after {
+    content: '⬎';
+}
+
+.conhecimento-header h3.ativo::after{
+    content:'⬏';
+}
+
+.conhecimento-text p.ativo {
+    display:block;
+    animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        
+    }
+    to {
+        opacity: 1;
+        max-height: 2rem;
+    }
+}
+
+
 
 
 .conhecimentos {
     width: 100%;
-    height: 100vh;
-    margin-bottom: 10rem;
+    margin-bottom: 1rem;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(6, 6rem);
-    row-gap: 1.5rem;
+    row-gap: 6rem;
 }
 
 /*HTML*/
@@ -416,23 +451,24 @@ h2 {
 
 
 
-
 /*Sessão Projetos*/
 
-.sessao-projetos h1 {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+/*Container da sessão Projetos*/
+.projetos {
+    background: linear-gradient(45deg, #000, #272a35);
+    width: 100%;
+    height: auto;
+}
+.projetos h1 {
     font-family: var(--font-primary);
     font-size: 3rem;
-    color: #272727;
-    margin-bottom: 0.5rem;
+    color: #fff;
+    text-align: center;
+    display: block;
     position: relative;
 }
-
-.sessao-projetos h1::before {
-    content:'';
+.projetos h1::before {
+    content: '';
     position: absolute;
     height:0.25rem;
     width:12.5rem;
@@ -440,21 +476,16 @@ h2 {
     left:60;
     border-radius:0.5rem;
     background: linear-gradient(45deg, #0575E6, #021B79);
-
-}
-
-/*Container da sessão Projetos*/
-.projetos {
-    background: linear-gradient(45deg, #000, #272a35);
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 2rem;
 }
 
 
 /*CARDS da Sessão Projetos*/
+.card-containers {
+    width:100%;
+    height: auto;
+    display:flex;
+    justify-content: space-evenly;
+}
 .card {
     margin-top: 5rem;
     width: 25rem;
@@ -507,7 +538,7 @@ h2 {
 }
 
 .card-info p {
-    font-family: var(--font-secundary);
+    font-family: var(--font-secondary);
     font-weight: 400;
     color: #eee;
     width: 80%;
@@ -543,6 +574,7 @@ h2 {
 
 
 /*Sessão de CONTATOS*/
+
 .sessao-contato {
     width: 100%;
     height: 100vh;
@@ -550,7 +582,8 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom:5rem;
+    margin-bottom:1rem;
+    margin-top: 1rem;
 }
 
 .contato-wrapper {
@@ -565,6 +598,7 @@ h2 {
     background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(25, 25, 25, 0.9)), url(imagens/contato.jpg);
     background-size: cover;
 }
+
 
 .contato-right {
     width: 65%;
@@ -595,6 +629,13 @@ h2 {
     border-radius:8px;
     background: linear-gradient(to right, #0575E6,#021B79);
 }
+
+
+.btn.btn-submit {
+    width:100%;
+    padding: 2rem;
+}
+
 
 /*Formulário de Contato*/
 .input-group {
@@ -645,7 +686,6 @@ h2 {
 }
 
 
-
 /*Label*/
 .field{
     border:none;
@@ -678,6 +718,8 @@ h2 {
     letter-spacing: 0.5px;
     background: linear-gradient(to right, #021B79,#0575E6);
 }
+
+
 
 
 
@@ -717,7 +759,7 @@ h2 {
 
 .sessao-sobremim h2 {
     color:#FFF;
-    font-family: var(--font-secundary);
+    font-family: var(--font-secondary);
     font-size: 3rem;
 
 }
@@ -732,7 +774,7 @@ h2 {
 }
 
 .descricao-sobremim img {
-    max-width:25rem;
+    max-width:15rem;
     border: 5px solid #FFF;
     border-radius:50% 50% 48% 52% / 20% 20% 80% 80%;
     margin-bottom:2rem;
@@ -749,6 +791,30 @@ h2 {
 .descricao-texto a {
     color:#fff;
 }
+
+.sobremim-botao{
+    margin-top:1rem;
+    font-family: var(--font-action);
+    color: #fff;
+    text-transform: uppercase;
+    /*Transformando o texto para maiúsculo*/
+    letter-spacing: .1rem;
+    background: #0575E6;
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    background: linear-gradient(to right, #021B79, #0575E6);
+    /*Degradê do botão*/
+    padding: 1rem 3rem;
+    /*Margem interna*/
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button_icon{
+    font-size:1.5rem;
+}
+
+
 
 
 
@@ -800,13 +866,13 @@ h2 {
 }
 
 .sessao-orcamento label {
-    font-family: var(--font-secundary);
+    font-family: var(--font-secondary);
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .sessao-orcamento input[type="number"] {
-    font-family: var(--font-secundary);
+    font-family: var(--font-secondary);
     width: 4rem;
     font-size: 2rem;
     outline: none;
@@ -821,6 +887,11 @@ h2 {
     cursor: pointer;
     grid-column: 2;
 }
+
+
+
+
+/*Footer*/ 
 
 footer {
     width: 100%;
@@ -839,7 +910,7 @@ footer {
 }
 
 .footer-content p {
-    font-family: var(--font-secundary);
+    font-family: var(--font-secondary);
     color: #a7a7a7;
     font-size: 1.2rem;
 }
@@ -853,6 +924,8 @@ footer {
 .social-list ul {
     display: flex;
 }
+
+
 
 #link-topo {
     z-index: 90;
@@ -874,18 +947,57 @@ footer {
 
 
 
+/*Animação de Scroll*/
+.js .js-scroll {
+    opacity: 0;
+    transform: translate3d(-60px, 0, 0);
+    transition: .3s;
 
+}
+.js .js-scroll.ativo {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    
+}
 
 
 /*Resposividade*/
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:650px) {
+
     .container {
         overflow: hidden;
     }
     header {
         width: 100%;
     }
+
+
+
+    /*Menu*/
+    .sidebar {
+        z-index: 80;
+        /*Menu de barras*/
+        width: 10rem;
+        height: 100vh;
+        background-color: #ffffff;
+        position: fixed;
+        top: 0;
+        right: -20rem;
+        /*-20rem se movimenta para fora da tela*/
+        transition: all 1s;
+    }
+    .menu-link {
+        font-size: 1.2rem;
+    }
+
+    .show-menu .hamburguer {
+        right: 10rem;
+    } 
+    /************/
+
+
+    /*Sessao de conhecimentos*/
     .sessao-conhecimentos h1 {
         font-family: var(--font-primary);
         font-size: 3rem;
@@ -893,21 +1005,15 @@ footer {
     }
     .conhecimentos {
         width: 100%;
-        height: auto;
         display: grid;
         grid-template-columns: repeat(1fr 1fr);
         grid-template-rows: (7);
-        row-gap: 6rem;
+        row-gap: 12rem;
     }
     .conhecimento-text {
-        font-family: var(--font-secundary);
-        margin-top: 1rem;
+        font-family: var(--font-tertiary);
+        margin-top: 0.5rem;
         display: flex;
-        -webkit-column-count: 2;
-        /* Chrome, Safari, Opera */
-        column-count: 2;
-        -webkit-column-gap: 40px;
-        column-gap: 40px;
     }
     .conhecimentos-img-wrapper {
         width: 50%;
@@ -949,19 +1055,37 @@ footer {
         text-align: center;
         grid-column: 6;
         grid-row: 7;
+        margin-bottom: 10rem;
     }
+    /********************/
+
+
+    /*Sessao Projetos*/
     .projetos {
         display: grid;
         grid-template-columns: auto;
         width: 100%;
     }
+    .card-containers {
+        width:100%;
+        height: auto;
+        display:flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
     .card {
+        margin: 0 auto;
         margin-top: 5rem;
         width: 20rem;
         height: 30rem;
         position: relative;
     }
+    /******************/
+
+
+    /*Sessao Contato*/
     .sessao-contato {
+        margin-top: 1rem;
         width: auto;
         height: 100vh;
     }
@@ -969,12 +1093,25 @@ footer {
         width: 100%;
         height: auto;
     }
+    .contato-right {
+        margin-right: auto;
+        width: 40%;
+        height: auto;
+        border-radius: 0.2rem;
+    }
+    .contato-left {
+        margin-left: auto;
+        width: 40%;
+        height: auto;
+        border-radius: 0.2rem;
+    }
+    
     .field {
         background: transparent;
         border: none;
         width: 16rem;
         font-size: 1.5rem;
-        font-family: var(--font-secundary);
+        font-family: var(--font-secondary);
         border-bottom: 2px dashed #636363;
         height: 3rem;
         outline: none;
@@ -985,7 +1122,7 @@ footer {
         left: 0;
         top: 2rem;
         font-size: 1.2rem;
-        font-family: var(--font-secundary);
+        font-family: var(--font-secondary);
         text-transform: uppercase;
         transition: all 0.3s;
     }
@@ -1004,30 +1141,44 @@ footer {
         max-width: 25rem;
         max-height: 3rem;
     }
-    .contato-right {
-        margin-right: auto;
-        width: 40%;
-        height: auto;
-        border-radius: 0.2rem;
-    }
-    .contato-left {
-        margin-left: auto;
-        width: 40%;
-        height: auto;
-        border-radius: 0.2rem;
-    }
+    /************************/
+
+    
+    /*Sobre mim*/
     .sessao-sobremim{
         width:100%;
         height:auto;
     }
+    .descricao-sobremim img {
+        max-width:15rem;
+    }
 
+
+    /*Orcamento*/
     .orcamento-wrapper {
         width: 90%;
-        height: auto;
+        height: 80vh;
     }
+    .orcamento-wrapper h1 {
+        margin-top: 2.1rem;
+        width:50%;
+        height: auto;
+        font-size:1.2rem;
+    }
+    
+    
+
+    /*Footer*/
     .footer-content {
         width: 100%;
+        height: auto;
+    } 
+
+    /*Arrow do canto da pagina*/
+    #link-topo {
+        width: 2.5rem;
     }
+    
 }
 
 
