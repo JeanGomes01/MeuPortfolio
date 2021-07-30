@@ -1,7 +1,9 @@
+/*Funcionalidade menu*/
 document.querySelector(".hamburguer").addEventListener("click", () =>
     document.querySelector(".container").classList.toggle("show-menu")
 ); 
 
+/*Funcionalidade de atualização de Preço*/
 document.querySelector("#qtde").addEventListener("change", atualizarPreco)
 document.querySelector("#js").addEventListener("change", atualizarPreco)
 document.querySelector("#layout-sim").addEventListener("change", atualizarPreco)
@@ -12,6 +14,8 @@ document.querySelector("#prazo").addEventListener("change", function() {
     atualizarPreco()
 })
 
+
+/*funcionalidade de Atualizar Preço*/
 function atualizarPreco() {
     const qtde = document.querySelector("#qtde").value
     const temJS = document.querySelector("#js").checked
@@ -60,6 +64,7 @@ linksInternos.forEach((link) => {
 initScrollSuave();
 
 
+/*Scroll suave do botão saiba*/ 
 function initScrollSaiba(){
 const botaoSaiba = document.querySelector('.js-banner a[href^="#"]');
 
@@ -81,15 +86,12 @@ initScrollSaiba();
 
 
 
-
+/*Funcionalidade da área de conhecimento do site*/ 
 function initAccordionSkills(){
     const allh3 = document.querySelectorAll('.select-h3');
     const tagP = document.querySelectorAll('.js-accordion p');    
     const activeClass = 'ativo';
     if(allh3.length && tagP){  
-    
-    
-    
 
     tagP[0].classList.add(activeClass);
     allh3[0].classList.add(activeClass);
@@ -107,30 +109,33 @@ function initAccordionSkills(){
 initAccordionSkills();
 
 
-/*
+
+/* funcionalidade de animação ao Scroll em todas as partes*/
+
+
 function initAnimacaoScroll(){
-const scrollSections = document.querySelectorAll('.js-scroll');
-if(scrollSections.length){
-const windowMetade = window.innerHeight * 0.6;
+
+    const scrollSections = document.querySelectorAll('.js-scroll');
+    if(scrollSections.length){
+    const windowMetade = window.innerHeight * 0.5;
 
 
-function animaScroll(){
-    scrollSections.forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const isSectionVisible = (sectionTop - windowMetade) < 0;
-        
-        if(isSectionVisible){
-            section.classList.add('ativo');
-        } else {
-            section.classList.remove('ativo');
-        }
-    })
-}
+    function animaScroll(){
+        scrollSections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const isSectionVisible = (sectionTop - windowMetade) < 0;
+    
+            if (isSectionVisible){
+                section.classList.add('ativo');
+            } else {
+                section.classList.remove('ativo');
+            }
+        })
+    }
 
-animaScroll();
+    animaScroll();
 
-window.addEventListener('scroll', animaScroll);
-}
+    window.addEventListener('scroll', animaScroll);
+    }
 };
 initAnimacaoScroll();
-*/
