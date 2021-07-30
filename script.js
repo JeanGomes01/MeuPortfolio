@@ -106,33 +106,8 @@ function initAccordionSkills(){
 };
 initAccordionSkills();
 
-/* allh3.forEach((h3) => {
-    h3.addEventListener('click', function(event){
-    const tagP = event.target.parentElement.nextElementSibling.children[0];
-      tagP.classList.toggle('ativo');
-    })
-})
- */
-/*function activeAccordion(){
 
-    console.log(this.classList.add('ativo'));
-}
-
-accordionSkills.forEach((item) => {
-    item.addEventListener('click', activeAccordion);
-})*/
-
-
-
-
-
-
-
-
-
-
-
-
+/*
 function initAnimacaoScroll(){
 const scrollSections = document.querySelectorAll('.js-scroll');
 if(scrollSections.length){
@@ -158,3 +133,4 @@ window.addEventListener('scroll', animaScroll);
 }
 };
 initAnimacaoScroll();
+*/
