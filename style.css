@@ -351,6 +351,9 @@ h2 {
 #javascript{
     background: linear-gradient(120deg, #ebe713,#928906);
 }
+#java {
+    background: linear-gradient(90deg, #f89820, #2965f1);
+}
 #mysql{
     background: linear-gradient(120deg, #00758F, #F29111);
 }
@@ -365,7 +368,7 @@ h2 {
     font-size:0.8rem;
     color:#FFF;
     font-family: var(--font-tertiary);
-    margin-top: 0.2rem;
+    margin-top: 1rem;
 }
 
 .conhecimento-text p {
@@ -405,7 +408,7 @@ h2 {
     margin-bottom: 1rem;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(6, 6rem);
+    grid-template-rows: repeat(8, 6rem);
     row-gap: 6rem;
 }
 
@@ -445,6 +448,10 @@ h2 {
 .conhecimento:nth-child(6) {
     grid-column: 11 / 14;
     grid-row: 5 / -1;
+}
+.conhecimento:nth-child(7) {
+    grid-column: 11 / 15;
+    grid-row: 7 / 7;
 }
 
 
@@ -1030,7 +1037,7 @@ footer {
     /*Sessao de conhecimentos*/
     .sessao-conhecimentos h1 {
         font-family: var(--font-primary);
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: #fff;
         
     }
@@ -1050,43 +1057,57 @@ footer {
         width: 50%;
         height: 50%;
         grid-column: 6;
-        grid-row: 1;
+        grid-row: 0;
     }
-    .conhecimento:nth-child(1) {
+    /*HTML*/
+    .conhecimento:nth-child(1) { 
         text-align: center;
         display: grid;
         grid-column: 6;
+        grid-row: 1;
+        margin-top: 2rem;
+    }
+    /*CSS*/
+    .conhecimento:nth-child(2) { 
+        text-align: center;
+        grid-column: 6;
         grid-row: 2;
     }
-    .conhecimento:nth-child(2) {
+    /*FIGMA*/
+    .conhecimento:nth-child(3) {
         text-align: center;
+        display: grid;
         grid-column: 6;
         grid-row: 3;
     }
-    .conhecimento:nth-child(3) {
+    /*JAVASCRIPT*/
+    .conhecimento:nth-child(4) {
         text-align: center;
         display: grid;
         grid-column: 6;
         grid-row: 4;
     }
-    .conhecimento:nth-child(4) {
+    /*JAVA*/
+    .conhecimento:nth-child(5) {
         text-align: center;
         display: grid;
         grid-column: 6;
         grid-row: 5;
     }
-    .conhecimento:nth-child(5) {
-        text-align: center;
-        display: grid;
-        grid-column: 6;
-        grid-row: 6;
-    }
+    /*MYSQL*/
     .conhecimento:nth-child(6) {
         display: grid;
         text-align: center;
         grid-column: 6;
+        grid-row: 6;
+    }
+    /*GIT E GITHUB*/
+    .conhecimento:nth-child(7) {
+        display: grid;
+        text-align: center;
+        grid-column: 6;
         grid-row: 7;
-        margin-bottom: 10rem;
+        margin-bottom: 1rem;
     }
     /********************/
 
@@ -1103,8 +1124,13 @@ footer {
         display:flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        margin: 0 auto;
+        
     }
     .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0 auto;
         margin-top: 5rem;
         width: 20rem;
@@ -1183,7 +1209,6 @@ footer {
     .descricao-sobremim img {
         max-width:15rem;
     }
-
 
     /*Orcamento*/
     .orcamento-wrapper {
