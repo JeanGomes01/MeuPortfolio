@@ -843,7 +843,7 @@ h2 {
 
 
 .orcamento-wrapper {
-    width: 90%;
+    width: 80%;
     height: 90%;
     background-color: #ffffff99;
     border-radius: 10px;
@@ -869,11 +869,11 @@ h2 {
 }
 
 .sessao-orcamento form {
-    margin: 4rem;
+    margin: 10rem 4rem 4rem 4rem;
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
 }
 
 .sessao-orcamento label {
@@ -884,7 +884,7 @@ h2 {
 
 .sessao-orcamento input[type="number"] {
     font-family: var(--font-secondary);
-    width: 4rem;
+    width: 2rem;*/
     font-size: 2rem;
     outline: none;
     border-radius: 10px;
