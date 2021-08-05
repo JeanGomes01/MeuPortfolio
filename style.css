@@ -1093,6 +1093,7 @@ footer {
         display: grid;
         grid-template-columns: auto;
         width: 100%;
+        height: auto;
     }
     .card-containers {
         width:100%;
