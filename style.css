@@ -513,6 +513,49 @@ h2 {
 }
 
 
+/*link para sites externos de cada ícone de conhecimentos*/
+
+#link-html {
+    color: #f06529;
+}
+
+#link-css {
+    color: #0575E6;
+}
+
+#link-javascript {
+    color: #ebe713;
+}
+
+#link-java {
+    color: #00758F;
+}
+
+#link-python {
+    color: #0575E6;
+}
+
+#link-mysql {
+    color: #F29111;
+}
+
+#link-figma {
+    color: #ac5975;
+}
+
+#link-git-github {
+    color: #4b4b4b;
+}
+
+#link-excel {
+    color: #006400;
+}
+
+#link-alteryx {
+    color: #2965f1;
+}
+
+
 /*Sessão Projetos*/
 
 
@@ -882,83 +925,6 @@ h2 {
 }
 
 
-/*ORÇAMENTO*/
-
-.sessao-orcamento {
-    margin-top: 2rem;
-    width: 100%;
-    height: 100vh;
-    background: url(/imagens/bg-orcamento.jpg);
-    object-fit: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.orcamento-wrapper {
-    width: 80%;
-    height: 90%;
-    background-color: #ffffff99;
-    border-radius: 10px;
-    box-shadow: 0 0.1rem rgba(0, 0, 0, 0.5);
-    position: relative;
-}
-
-.sessao-orcamento h1 {
-    text-align: center;
-    width: 60%;
-    position: absolute;
-    top: 0;
-    left: 6rem;
-    background: #0575E6;
-    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
-    background: linear-gradient(to right, #021B79, #0575E6);
-    padding: 0 3rem;
-    color: #fff;
-    font-family: var(--font-primary);
-    font-size: 2.4rem;
-    font-weight: lighter;
-    box-shadow: 0 0.1rem rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.sessao-orcamento form {
-    margin: 8rem 4rem 4rem 4rem;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 1rem;
-    row-gap: 1rem;
-}
-
-#prazo {
-    width: 80%;
-}
-
-.sessao-orcamento label {
-    font-family: var(--font-secondary);
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.sessao-orcamento input[type="number"] {
-    font-family: var(--font-secondary);
-    width: 3rem;
-    font-size: 2rem;
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    padding: 0.3rem;
-}
-
-.btn-orcamento {
-    width: 80%;
-    text-transform: uppercase;
-    padding: 1rem;
-    cursor: pointer;
-    grid-column: 2;
-}
-
-
 /*Footer*/
 
 footer {
@@ -1255,41 +1221,6 @@ footer {
     }
     .descricao-sobremim img {
         max-width: 15rem;
-    }
-    /*Orcamento*/
-    .sessao-orcamento h1 {
-        text-align: center;
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: -2.3rem;
-        left: 2rem;
-        right: auto;
-        margin: 0 auto;
-        margin-top: 2rem;
-        height: auto;
-        font-size: 1.5rem;
-        font-weight: lighter;
-    }
-    .sessao-orcamento form {
-        width: 60%;
-        height: 90%;
-        margin: 8rem 4rem 4rem 4rem;
-        display: block;
-        column-gap: 1rem;
-        row-gap: 1rem;
-    }
-    .sessao-orcamento input {
-        display: flex;
-    }
-    .orcamento-wrapper {
-        width: 95%;
-        height: 90%;
-    }
-    .btn.btn-orcamento {
-        width: 100%;
     }
     /*Footer*/
     .footer-content {
