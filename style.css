@@ -902,6 +902,10 @@ h2 {
     color: #0575E6;
 }
 
+#link-empresa {
+    color: #0575E6;
+}
+
 .sobremim-botao {
     margin-top: 0.3rem;
     font-family: var(--font-action);
